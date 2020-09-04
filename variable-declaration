@@ -1,0 +1,39 @@
+ /*Write a program to print out: “As economic reforms picked up the pace, India's GDP grew five-fold to reach US$2.2 trillion in 2015 (as per IMF estimates).”
+
+You need to define separate variables for ‘India’, ‘$’, ‘2.2’, and ‘2015’. Use appropriate data types for each literal and accordingly print the statement using corresponding format specifiers.*/
+
+#include <iostream>
+#include<string>
+using namespace std;
+
+int main() {
+	string name;
+	char currency;
+	float value;
+	int year;
+
+	cout<<"Enter where economy reformed: ";
+	getline(cin,name);
+
+	cout<<"Enter the currency: ";
+	cin>>currency;
+
+	cout<<"Enter the value: ";
+	cin>>value;
+
+	cout<<"Enter year: ";
+	cin>>year;
+
+	cout<<"As economic reforms picked up the pace,"<<name<<
+	       " GDP grew five-fold to reach US"<<currency<<value<< " trillion in "<<year<<" (as per IMF estimates)."<<endl;
+	return 0;
+}
+
+/*OUTPUT:
+ * Enter where economy reformed: india
+Enter the currency: $
+Enter the value: 1.5
+Enter year: 2020
+As economic reforms picked up the pace,india GDP grew five-fold to reach US$1.5 trillion in 2020 (as per IMF estimates).
+ */
+ */
