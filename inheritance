@@ -1,0 +1,94 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class person{
+public:
+	int age;
+	string fullName;
+	string phoneNumber;
+
+};
+
+
+class Student:public person {
+
+    public:
+        int studentId;
+        string schoolName;
+
+        void study() {
+            cout << "Studying" << endl;
+        }
+        void display(){
+
+        		cout<<"Student Id: "<<studentId<<endl;
+        		cout<<"School name: "<<schoolName<<endl;
+        		cout<<"Age: "<<age<<endl;
+        		cout<<"Full name: "<<fullName<<endl;
+        		cout<<"Phone number: "<<phoneNumber<<endl;
+        		cout<<"\n";
+        	}
+};
+
+class Employee : public person {
+
+    public:
+        int employeeId;
+        string companyName;
+
+        void work() {
+            cout << "Working" << endl;
+        }
+        void Display(){
+
+            cout<<"Employee Id: "<<employeeId<<endl;
+            cout<<"Company name: "<<companyName<<endl;
+            cout<<"Age: "<<age<<endl;
+            cout<<"Full name: "<<fullName<<endl;
+            cout<<"Phone number: "<<phoneNumber<<endl;
+            cout<<"\n";
+                	}
+};
+
+
+int main() {
+     Student student;
+     student.studentId=1;
+     student.age=20;
+     student.fullName="Apurva Sarode";
+     student.phoneNumber="363";
+     student.schoolName="VDS";
+
+     student.study();
+     student.display();
+
+     Employee employee;
+     employee.employeeId=11;
+     employee.age=45;
+     employee.fullName="Vinit Sharma";
+     employee.phoneNumber="456";
+     employee.companyName="Infosys";
+
+     employee.work();
+     employee.Display();
+
+    return 0;
+}
+
+/*OUTPUT:
+ * Studying
+Student Id: 1
+School name: VDS
+Age: 20
+Full name: Apurva Sarode
+Phone number: 363
+
+Working
+Employee Id: 11
+Company name: Infosys
+Age: 45
+Full name: Vinit Sharma
+Phone number: 456
+
+ */
