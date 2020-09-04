@@ -1,0 +1,63 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+class Person {
+
+    protected:
+        string phoneNumber;
+
+    public:
+        string fullName;
+
+        void setPhoneNumber(string phoneNumber) {
+            this->phoneNumber = phoneNumber;
+        }
+};
+
+class Employee : public Person {
+
+    private:
+        float salary;
+
+    protected:
+        float bonus;
+    public:
+        void addBonus(float bonus) {
+            this->salary = this->salary + bonus;
+        }
+
+        int id;
+
+        void setSalary(float salary) {
+            this->salary = salary;
+        }
+        void Display(){
+
+                    cout<<"Employee Id: "<<id<<endl;
+                    cout<<"Full name: "<<fullName<<endl;
+                    cout<<"Phone number: "<<phoneNumber<<endl;
+                    cout << "Current salary: " << salary<<endl;
+                    cout<<"\n";
+        }
+};
+
+
+int main() {
+
+    Employee employee;
+    employee.id = 1;
+    employee.fullName = "Aditya Sharma";
+    employee.setPhoneNumber("+91-887700132");
+    employee.setSalary(35000);
+    employee.addBonus(4000);
+    employee.Display();
+    return 0;
+}
+
+/*OUTPUT:
+ * Employee Id: 1
+Full name: Aditya Sharma
+Phone number: +91-887700132
+Current salary: 39000
+ */
