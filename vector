@@ -1,0 +1,27 @@
+#include <iostream>
+#include<vector>
+using namespace std;
+
+int main() {
+
+	vector<string>name;
+	name.push_back("Shlok");
+	name.push_back("Rohit");
+	name.push_back("Peter");
+
+	cout << "Size: " << name.size() << endl;
+	cout<<"Element at index 0:"<<name[0]<<endl;  //print element at index 0
+
+	name.pop_back();
+	name[0]="Ravi";
+	cout << "Size: " << name.size() << endl;
+	cout<<"Element at index 0:"<<name[0]<<endl;  //remove elemet at index 0
+	return 0;
+}
+
+/*OUTPUT:
+ * Size: 3
+Element at index 0:Shlok
+Size: 2
+Element at index 0:Ravi
+ */
